@@ -1,0 +1,28 @@
+{
+  "name": "aqa",
+  "version": "1.0.0",
+  "description": "Check",
+  "main": "index.js",
+  "scripts": {
+    "unit": "jest --config='./unit/jest.config.ts' --coverage",
+    "cy-e2e-start": "cypress open --config-file=./ui/cypress.config.ts",
+    "cy-api-start": "cypress open --config-file=./api/cypress.config.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cergyni/aqa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cergyni/aqa/issues"
+  },
+  "homepage": "https://github.com/cergyni/aqa#readme",
+  "devDependencies": {
+    "@types/jest": "^29.2.0",
+    "cypress": "^10.10.0",
+    "jest": "^29.2.1",
+    "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.1"
+  }
+}
