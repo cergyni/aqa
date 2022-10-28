@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "unit": "jest --config='./unit/jest.config.ts' --coverage",
-    "cy-e2e-start": "cypress open --config-file=./ui/cypress.config.ts",
-    "cy-api-start": "cypress open --config-file=./api/cypress.config.ts"
+    "cy-ui-start": "cypress open --config-file=./ui/cypress.config.ts",
+    "cy-ui-run": "cypress run --browser chrome --headed --config-file=./ui/cypress.config.ts",
+    "cy-api-start": "cypress open --config-file=./api/cypress.config.ts",
+    "cy-ui-reporter": "allure generate ./ui/cypress/assets/allure-results --clean -o ./ui/cypress/assets/allure-report && allure open ./ui/cypress/assets/allure-report"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,9 @@
   },
   "homepage": "https://github.com/cergyni/aqa#readme",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.33.1",
     "@types/jest": "^29.2.0",
+    "allure-commandline": "^2.18.1",
     "cypress": "^10.10.0",
     "jest": "^29.2.1",
     "ts-jest": "^29.0.3",
