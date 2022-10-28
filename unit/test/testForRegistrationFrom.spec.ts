@@ -1,5 +1,6 @@
 import { EMPTY_FIELD_ERROR, LOGIN_IS_ALRADY_USE, LOGIN_NOT_VALID, PASSWORD_IS_ALRADY_USE, PASSWORD_NOT_VALID, SUCCESSFUL_LOGIN, SUCCESSFUL_PASSWORD } from "../constants/constants";
 import { RegistrationForm } from "../src/registrationForm";
+import { expect, test } from '@jest/globals'
 
 let regForm: any;
 
