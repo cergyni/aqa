@@ -14,7 +14,7 @@ export class RegistrationForm {
 
     public fillPassword(password: string) {
         try {
-            if (this.ckeckPassword(password)) return SUCCESSFUL_PASSWORD
+            if (this.checkPassword(password)) return SUCCESSFUL_PASSWORD
         } catch (error) {
             throw error
         }
@@ -34,7 +34,7 @@ export class RegistrationForm {
         return true
     }
 
-    private ckeckPassword(password: string) {
+    private checkPassword(password: string) {
         if (!password) {
             throw new Error(EMPTY_FIELD_ERROR);
         }

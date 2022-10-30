@@ -1,11 +1,11 @@
 
-export enum CATALOG {
+export enum CATALOG_TYPES {
     COMP_TECHNIC = "Компьютерная техника",
     VIDEO_AUDIO = "Видео, аудио, фото, оптика",
     APPLIANCES = "Бытовая техника",
 }
 
-export enum CATEGORIES_COMP {
+export enum COMPUTER_TECHNOLOGY_CATEGORIES {
     LAPTOPS = "Ноутбуки",
     TABLETS = "Планшеты",
     MONOBLOKS = "Моноблоки",
@@ -39,7 +39,7 @@ export enum INPUT_MEMORY_SIZE_GPU {
     TWENTY_GB = "20480",
 }
 export enum PAGES {
-    CATALOG = "Catalog",
+    CATALOG_TYPES = "Catalog",
     GPU = "GPU",
     LAPTOP = "Laptop",
 }

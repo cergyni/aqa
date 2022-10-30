@@ -1,4 +1,4 @@
-import { CATALOG, PAGES } from "../types/types";
+import { CATALOG_TYPES, PAGES } from "../types/types";
 import { CatalogPage } from "./catalogPage";
 import { GpuPage } from "./gpuPage";
 import { LaptopPage } from "./laptopPage";
@@ -7,7 +7,7 @@ import { LaptopPage } from "./laptopPage";
 export class PageFactory {
     static getPage(pageName: PAGES){
         switch (pageName) {
-            case PAGES.CATALOG:
+            case PAGES.CATALOG_TYPES:
                 return new CatalogPage()
             case PAGES.GPU:
                 return new GpuPage()    

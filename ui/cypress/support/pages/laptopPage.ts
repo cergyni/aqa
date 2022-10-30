@@ -14,7 +14,7 @@ export class LaptopPage extends GpuPage {
         return cy.get("div[class='f-checkers']").contains(type)
     }
 
-    public clickButtonTypeHardDriveByInnerText(type: HARD_DRIVE_TYPE) {
+    public clickOnHardDriveButtonByInnerText(type: HARD_DRIVE_TYPE) {
         this.getButtonTypeHardDriveByInnerText(type).click()
         this.clickOnSpanButtonByInnerText(INNER_TEXT_IN_SPAN_BUTTON.SHOW)
     }
@@ -22,7 +22,7 @@ export class LaptopPage extends GpuPage {
     public getImplementFilterValue() {
         return cy.get("button[class='tags__it']")
     }
-    public checkIsFilterImplement(type: HARD_DRIVE_TYPE) {
+    public checkIfFilterImplemented(type: HARD_DRIVE_TYPE) {
         this.getImplementFilterValue().should('have.text', type)
     }
 }

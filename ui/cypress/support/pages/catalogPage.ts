@@ -1,4 +1,4 @@
-import {  CATEGORIES_COMP } from "../types/types";
+import {  COMPUTER_TECHNOLOGY_CATEGORIES } from "../types/types";
 import { BasePage } from "./basePage";
 
 export class CatalogPage extends BasePage {
@@ -9,11 +9,11 @@ export class CatalogPage extends BasePage {
     }
    
 
-    public getCategoryByInnerText(category: CATEGORIES_COMP ) {
+    public getCategoryByInnerText(category: COMPUTER_TECHNOLOGY_CATEGORIES ) {
         return cy.get("li[class='category__item category__item--lg']").contains(category)
     }
 
-    public clickCategoryByInnerText(category: CATEGORIES_COMP) {
+    public clickCategoryByInnerText(category: COMPUTER_TECHNOLOGY_CATEGORIES) {
         this.getCategoryByInnerText(category).click()
     }
 
