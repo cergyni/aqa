@@ -13,7 +13,7 @@ export class GpuPage extends CatalogPage {
     }
 
 
-    public innerTextFromHeadingShouldInclude(titleText: COMPUTER_TECHNOLOGY_CATEGORIES) {
+    public checkHeadingInnerText(titleText: COMPUTER_TECHNOLOGY_CATEGORIES) {
         this.categoryMenu.getInnerTextFromHeading().then($el => {
             cy.wrap($el.text()).should("include", titleText)
         })

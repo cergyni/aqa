@@ -26,12 +26,12 @@ describe("Catalog page test", () => {
         it(`Should open ${COMPUTER_TECHNOLOGY_CATEGORIES.LAPTOPS} page `, () => {
             catalogPage.clickCategoryByInnerText(COMPUTER_TECHNOLOGY_CATEGORIES.LAPTOPS)
             const laptop = PageFactory.getPage(PAGES.LAPTOP) as LaptopPage
-            laptop.innerTextFromHeadingShouldInclude(COMPUTER_TECHNOLOGY_CATEGORIES.LAPTOPS)
+            laptop.checkHeadingInnerText(COMPUTER_TECHNOLOGY_CATEGORIES.LAPTOPS)
         })
         it(`Should open ${COMPUTER_TECHNOLOGY_CATEGORIES.GPU} page `, () => {
             catalogPage.clickCategoryByInnerText(COMPUTER_TECHNOLOGY_CATEGORIES.GPU)
             const gpuPage = PageFactory.getPage(PAGES.GPU) as GpuPage
-            gpuPage.innerTextFromHeadingShouldInclude(COMPUTER_TECHNOLOGY_CATEGORIES.GPU)
+            gpuPage.checkHeadingInnerText(COMPUTER_TECHNOLOGY_CATEGORIES.GPU)
         })
     })
 })
