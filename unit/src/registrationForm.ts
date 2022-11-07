@@ -5,20 +5,18 @@ export class RegistrationForm {
     private cachePassword: Set<string> = new Set();
 
     public fillLogin(login: string) {
-        try {
-            if (this.ckeckLogin(login)) return SUCCESSFUL_LOGIN
-        } catch (error) {
-            throw error
+        if (this.checkLogin(login)) {
+            return SUCCESSFUL_LOGIN
         }
     }
 
     public fillPassword(password: string) {
         if (this.checkPassword(password)) {
             return SUCCESSFUL_PASSWORD
-        } 
+        }
     }
 
-    private ckeckLogin(login: string) {
+    private checkLogin(login: string) {
         if (!login) {
             throw new Error(EMPTY_FIELD_ERROR);
         }
