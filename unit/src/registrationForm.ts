@@ -13,11 +13,9 @@ export class RegistrationForm {
     }
 
     public fillPassword(password: string) {
-        try {
-            if (this.checkPassword(password)) return SUCCESSFUL_PASSWORD
-        } catch (error) {
-            throw error
-        }
+        if (this.checkPassword(password)) {
+            return SUCCESSFUL_PASSWORD
+        } 
     }
 
     private ckeckLogin(login: string) {
