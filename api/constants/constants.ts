@@ -18,3 +18,13 @@ export const SCHEMA_NAME = {
     official: "",
     nativeName: {}
 }
+export const LANGUAGES_NAME = {
+    spanish: "Spanish",
+    german: "German",
+    dutch: "Dutch",
+}
+export const LANGUAGES_CODE = {
+    spa: "spa",
+    deu: "deu",
+    nld: "nld",
+}
