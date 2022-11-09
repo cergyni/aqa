@@ -5,16 +5,16 @@ import { LaptopPage } from "./laptopPage";
 
 
 export class PageFactory {
-    static getPage(pageName: PAGES){
+    static getPage(pageName: PAGES) {
         switch (pageName) {
             case PAGES.CATALOG_TYPES:
                 return new CatalogPage()
             case PAGES.GPU:
-                return new GpuPage()    
+                return new GpuPage()
             case PAGES.LAPTOP:
-                return new LaptopPage()    
+                return new LaptopPage()
             default:
-                break;
+                throw new Error('Invalid page name is provided.')
         }
     }
 }
