@@ -80,20 +80,20 @@ describe("restcountries.com", () => {
     describe("Search countries by currency name and code", () => {
         let res: any
         
-        Object.values(CURRENCY).forEach((values: keyof Currency)=> {
-            test(`Should get countries containing ${values} currency`, async () => {
+        Object.values(CURRENCY).forEach((value: keyof Currency)=> {
+            test(`Should get countries containing ${value} currency`, async () => {
                 try {
-                    res = await axios.get(baseUrl + `currency/` + values)
+                    res = await axios.get(baseUrl + `currency/` + value)
                 } catch (error: any) {
                     throw new Error(error.message)
                 }
                 expect(res.status).toEqual(200)
                 const ObjOfCurrencies = getObjOfCurrencies(res.data)
                 ObjOfCurrencies.symbol.forEach(elem => {                    
-                    expect(elem).toEqual(CURRENCY_SYMBOLS[values])
+                    expect(elem).toEqual(CURRENCY_SYMBOLS[value])
                 })
                 ObjOfCurrencies.name.forEach(elem => {
-                    expect(elem).toContain(values)
+                    expect(elem).toContain(value)
                 })
             })
         })
@@ -133,7 +133,7 @@ describe("restcountries.com", () => {
             expect(res.status).toEqual(200)
             res.data.forEach((el: any) => {
                 expect(Object.keys(el.currencies)).toEqual(expect.not.arrayContaining([CURRENCY_CODE.BYN]))
-            });CURRENCY_CODE
+            });
         })
         test(`Should get '${NOT_FOUND_MESSAGE}' message. Searching by uppercase part of ${CURRENCY_CODE.BYN} `, async () => {
             try {
